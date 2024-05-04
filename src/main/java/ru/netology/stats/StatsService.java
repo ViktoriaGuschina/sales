@@ -1,15 +1,8 @@
 package ru.netology.stats;
 
 public class StatsService {
-    public void main(String[] args) {
-        int[] arr = new int[]{
-                8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
-        };
-        System.out.println(totalAmount(arr));
-    }
-
-    public int totalAmount(int[] sales) {
-        int totalAmount = 0;
+    public long totalAmount(long[] sales) {
+        long totalAmount = 0;
         for (int i = 0; i < sales.length; i++) {
             totalAmount = sales[i] + totalAmount;
 
@@ -18,11 +11,11 @@ public class StatsService {
         return totalAmount;
     }
 
-    public int avg(int[] sales) {
+    public long avg(long[] sales) {
         return totalAmount(sales) / 12;
     }
 
-    public int maxSales(int[] sales) {
+    public long maxSales(long[] sales) {
         int maxMonth = 5;
 
         for (int i = 0; i < sales.length; i++) {
@@ -34,7 +27,7 @@ public class StatsService {
         return maxMonth + 1;
     }
 
-    public int minSales(int[] sales) {
+    public long minSales(long[] sales) {
         int minMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -46,8 +39,8 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int lowerAvgCount(int[] sales) {
-        int avg = avg(sales);
+    public long lowerAvgCount(long[] sales) {
+        long avg = avg(sales);
         int count = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < avg) {
@@ -57,8 +50,8 @@ public class StatsService {
         return count;
     }
 
-    public int upperAvgCount(int[] sales) {
-        int avg = avg(sales);
+    public long upperAvgCount(long[] sales) {
+        long avg = avg(sales);
         int count = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > avg) {

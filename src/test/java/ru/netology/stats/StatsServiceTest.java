@@ -5,47 +5,47 @@ import org.junit.jupiter.api.Test;
 
 public class StatsServiceTest {
     private StatsService service = new StatsService();
-    private int[] arr = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    private long[] arr = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
     @Test
     public void totalAmount() {
-        int expected = 180;
-        int actual = service.totalAmount(arr);
+        long expected = 180;
+        long actual = service.totalAmount(arr);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void avg() {
-        int expected = 15;
-        int actual = service.avg(arr);
+        long expected = 15;
+        long actual = service.avg(arr);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void maxSales() {
-        int expected = 6;
-        int actual = service.maxSales(arr);
+        long expected = 6;
+        long actual = service.maxSales(arr);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void minSales() {
-        int expected = 9;
-        int actual = service.minSales(arr);
+        long expected = 9;
+        long actual = service.minSales(arr);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void lowerAvgCount() {
-        int expected = 5;
-        int actual = service.lowerAvgCount(arr);
+        long expected = 5;
+        long actual = service.lowerAvgCount(arr);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void upperAvgCount() {
-        int expected = 5;
-        int actual = service.upperAvgCount(arr);
+        long expected = 5;
+        long actual = service.upperAvgCount(arr);
         Assertions.assertEquals(expected, actual);
     }
 }
